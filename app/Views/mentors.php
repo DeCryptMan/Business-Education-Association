@@ -56,8 +56,17 @@
         top: 0; left: 0; width: 100%; height: 100%;
         object-fit: cover; /* Ensures image fills square nicely */
         transition: transform 0.5s ease;
+
     }
-    
+/* --- ИСПРАВЛЕНИЕ: Увеличиваем 4-ю картинку (последнюю) --- */
+    .mentor-card:nth-child(4) .mentor-img {
+        transform: scale(1.35);
+        transform-origin: top center; /* Чтобы лицо не обрезалось сверху */
+    }
+    /* При наведении на 4-ю карточку увеличиваем еще чуть больше, чтобы сохранить эффект */
+    .mentor-card:nth-child(4):hover .mentor-img {
+        transform: scale(1.45);
+    }
     .mentor-card:hover .mentor-img {
         transform: scale(1.05);
     }
